@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Recognition</title>
+    <link rel="stylesheet" href="lib/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="side left-side">
+            <div class="box box-left">
+                <span class="title">Цільове Зображення:</span>
+                <div id='break1' style="display: none"></div>
+                <div id='break3'></div>
+                <img id="target-image" style="display: none" src="image/mona_small.png" alt="target-image">
+            </div>
+        </div>
+        <div class="side right-side">
+            <div class="box box-right">
+                <span class="title">Зображення Еталон:</span>
+                <img id="pattern-image" src="image/pattern.png" alt="pattern-image">
+                <div id='break2' style="display: none"></div>
+            </div>
+        </div>
+        <div class="side bottom-side">
+            <div class="box-bottom font-pretty">
+                <div class="box-bottom-panel">
+                    <button id="recognize">Почати Розпізнавання</button>
+                    <div id="progressbar"></div>
+                </div>
+                <p class="clear">
+                    <span id="slider-input" class="bold">Наближення: 0.94
+		    		</span>
+                    <div id="slider"></div>
+                </p>
+                <p><span class="bold">Цільове Зобр.:</span>
+                    <input id="file-target" type="file" onchange="onFileSelected(event, 'target-image')">
+                </p>
+                <p>
+                    <span class="bold">Еталонне Зобр.:</span>
+                    <input id="file-pattern" type="file" onchange="onFileSelected(event, 'pattern-image')">
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="lib/jquery.js"></script>
+<script type="text/javascript" src="lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/correlation.js"></script>
+<script type="text/javascript" src="js/recognition.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+</html>

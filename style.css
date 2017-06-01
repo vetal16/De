@@ -1,0 +1,83 @@
+.container {
+    height: 1000px;
+}
+
+.side {
+    width: 50%;
+}
+
+.left-side {
+    float: left;
+    padding-right: 0px;
+}
+
+.right-side {
+    float: right;
+    padding-left: 0px;
+}
+
+.bottom-side {
+    clear: both;
+    width: 100%;
+}
+
+#recognize {
+    padding: 6px;
+    font-family: Helvetica;
+    float: left;
+}
+
+#progressbar {
+    width: 205px;
+}
+
+.clear {
+    clear: both;
+}
+
+.box {
+    padding: 10px;
+    border: solid 3px;
+    display: inline-block;
+}
+
+.box-left {
+    float: right;
+}
+
+.box-right {
+    float: left;
+}
+
+.box-bottom {
+    padding: 10px;
+    border: solid black;
+    background-color: #FFC107;
+    margin: 0px auto;
+    display: table;
+}
+
+.box-bottom-panel {
+    height: 30px;
+}
+
+.title {
+    font-size: 16px;
+    font-family: Helvetica;
+    line-height: 20px;
+    display: block;
+}
+
+.font-pretty {
+    font-size: 14px;
+    font-family: Helvetica;
+    line-height: 16px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.ui-widget-header {
+    background: #2196F3;
+}
