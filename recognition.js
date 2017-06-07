@@ -25,7 +25,7 @@ var Reco = (function() {
                 count++;
                 drawContextTargetImage.beginPath();
                 drawContextTargetImage.lineWidth = "1";
-                drawContextTargetImage.strokeStyle = "green";
+                drawContextTargetImage.strokeStyle = "red";
                 drawContextTargetImage.rect(k, l, a, b);
                 drawContextTargetImage.stroke();
             }
