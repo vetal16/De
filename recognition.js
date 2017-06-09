@@ -16,7 +16,7 @@ var Reco = (function() {
         return kof >= precision && kof <= 1;
     }
 
-    function loop(count, a, b, m, n, k, l, drawContextTargetImage, pictureContext, Picture, patternContext, Pattern, cycle, cycleCount, cyclesCount, progress, recognize, precision) {
+    function neuron(count, a, b, m, n, k, l, drawContextTargetImage, pictureContext, Picture, patternContext, Pattern, cycle, cycleCount, cyclesCount, progress, recognize, precision) {
         setTimeout(function() {
             var grayPicture = imageToGrayArray(pictureContext.getImageData(k, l, a, b).data),
                 grayPattern = imageToGrayArray(patternContext.getImageData(0, 0, a, b).data);
@@ -60,7 +60,7 @@ var Reco = (function() {
             for (l = 0; l <= n - b; l++)
                 for (k = 0; k <= m - a; k++) {
                     ++cycleCount;
-                    loop(count, a, b, m, n, k, l, drawContextTargetImage, pictureContext, Picture, patternContext, Pattern, cycle, cycleCount, (m - a) * (n - b), progress, recognize, precision);
+                    neuron(count, a, b, m, n, k, l, drawContextTargetImage, pictureContext, Picture, patternContext, Pattern, cycle, cycleCount, (m - a) * (n - b), progress, recognize, precision);
                 }
 
             return count;
